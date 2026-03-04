@@ -67,3 +67,24 @@ if st.button("Търси"):
 
     if not found:
         st.write("Няма намерена книга с това заглавие и цена.")
+# =========================
+# 🔎 Търсене по автор
+# =========================
+
+import streamlit as st
+
+st.header("🔎 Търсене по автор")
+
+search_author = st.text_input("Въведи име на автор")
+
+if st.button("Търси по автор"):
+
+    found = False
+
+    for book in st.session_state.books:
+        if book["author"] == search_author:
+            st.write(book)
+            found = True
+
+    if not found:
+        st.write("Няма намерени книги от този автор.")
