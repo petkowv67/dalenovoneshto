@@ -40,7 +40,7 @@ if st.button("Покажи всички книги"):
         for book in st.session_state.books:
             st.write("Заглавие:", book["title"])
             st.write("Автор:", book["author"])
-            st.write("Цена:", f"{book['price']:.2f} лв.")
+            st.write("Цена:", f"{book['price']:.2f} euro.")
             st.write("----------------------")
 
 # =====================================
@@ -61,7 +61,7 @@ if st.button("Търси"):
         ):
             st.write("Заглавие:", book["title"])
             st.write("Автор:", book["author"])
-            st.write("Цена:", f"{book['price']:.2f} лв.")
+            st.write("Цена:", f"{book['price']:.2f} euro.")
             st.write("----------------------")
             found = True
 
